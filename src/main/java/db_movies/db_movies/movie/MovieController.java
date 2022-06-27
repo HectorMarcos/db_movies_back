@@ -29,7 +29,7 @@ public class MovieController {
         return movieService.getMovieById(id);
     }
 
-    @RequestMapping(value = "/add")
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public Movie addMovie(Movie newMovie){
         return movieService.addMovie(newMovie);
     }
@@ -39,7 +39,7 @@ public class MovieController {
         movieService.deleteMovie(id);
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update")
     public void updateMovie(Movie movieUpdated){
         movieService.updateMovie(movieUpdated);
     }

@@ -44,6 +44,7 @@ public class MovieService {
             movieToUpdate.setCertificate(movieUpdated.getCertificate());
             movieToUpdate.setRuntime(movieUpdated.getRuntime());
             movieToUpdate.setImdbRating(movieUpdated.getImdbRating());
+            movieToUpdate.setInfo(movieUpdated.getInfo());
             movieToUpdate.setMetaScore(movieUpdated.getMetaScore());
             movieToUpdate.setVotes(movieUpdated.getVotes());
             movieToUpdate.setGross(movieUpdated.getGross());

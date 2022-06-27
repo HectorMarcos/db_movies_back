@@ -22,6 +22,9 @@ public class Movie {
     private int runtime;
     @Column(name = "imdb_rating")
     private Float imdbRating;
+
+    @Column(name = "info")
+    private String info;
     @Column(name = "metascore")
     private int metaScore;
     @Column(name = "votes")
@@ -32,19 +35,20 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String title, int year, String imageUrl, String certificate, int runtime, Float imdbRating, int metaScore, int votes, int gross) {
+    public Movie(String title, int year, String imageUrl, String certificate, int runtime, Float imdbRating, String info, int metaScore, int votes, int gross) {
         this.title = title;
         this.year = year;
         this.imageUrl = imageUrl;
         this.certificate = certificate;
         this.runtime = runtime;
         this.imdbRating = imdbRating;
+        this.info = info;
         this.metaScore = metaScore;
         this.votes = votes;
         this.gross = gross;
     }
 
-    public Movie(Long id, String title, int year, String imageUrl, String certificate, int runtime, Float imdbRating, int metaScore, int votes, int gross) {
+    public Movie(Long id, String title, int year, String imageUrl, String certificate, int runtime, Float imdbRating, String info, int metaScore, int votes, int gross) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -52,6 +56,7 @@ public class Movie {
         this.certificate = certificate;
         this.runtime = runtime;
         this.imdbRating = imdbRating;
+        this.info = info;
         this.metaScore = metaScore;
         this.votes = votes;
         this.gross = gross;
@@ -113,6 +118,14 @@ public class Movie {
         this.imdbRating = imdbRating;
     }
 
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
     public int getMetaScore() {
         return metaScore;
     }
@@ -135,21 +148,5 @@ public class Movie {
 
     public void setGross(int gross) {
         this.gross = gross;
-    }
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", certificate='" + certificate + '\'' +
-                ", runtime=" + runtime +
-                ", imdbRating=" + imdbRating +
-                ", metaScore=" + metaScore +
-                ", votes=" + votes +
-                ", gross=" + gross +
-                '}';
     }
 }
