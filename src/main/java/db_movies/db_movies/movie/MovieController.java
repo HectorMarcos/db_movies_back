@@ -29,7 +29,7 @@ public class MovieController {
         return movieService.getMovieById(id);
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/add")
     public Movie addMovie(Movie newMovie){
         return movieService.addMovie(newMovie);
     }
